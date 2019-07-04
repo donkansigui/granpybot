@@ -1,5 +1,5 @@
 import re
-from files import STOPWORDS
+from files.config import STOPWORDS
 
 
 class Parser():
