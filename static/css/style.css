@@ -1,0 +1,19 @@
+/* Feuille de styles CSS */
+h1, h2
+{
+  color: #563D7C;
+}
+h1
+{
+  font-size: 2em;
+}
+body
+{
+    background-color: black;
+    color: white;
+}
+
+a:hover
+{
+	font-weight: bold;
+}
