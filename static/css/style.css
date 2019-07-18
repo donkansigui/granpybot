@@ -1,19 +1,63 @@
 /* Feuille de styles CSS */
-h1, h2
-{
-  color: #563D7C;
-}
-h1
-{
-  font-size: 2em;
-}
-body
-{
-    background-color: black;
-    color: white;
-}
+header{
+		border-bottom: black 2px solid;
+		margin-bottom: 15px;
+	}
 
-a:hover
-{
-	font-weight: bold;
-}
+	body{
+	    margin:0px;
+	}
+
+	form{
+		margin-bottom: 25px;
+	}
+
+	#footer{
+		background-color:green;
+		text-align:right;
+		font-weight:bold;
+		font-size:20px;
+		box-shadow: inset 1px 1px 5px #000;
+		margin-top: 25px;
+		height: 30px;
+	}
+
+	#footer img{
+		height: 25px;
+		width: 25px;
+		vertical-align: text-bottom;
+	}
+
+	#footer ul li{
+		display: inline;
+		margin-right: 5px;
+	}
+
+	.container-fluid{
+		padding:0;
+	}
+
+	#map, #photo, #story, #intro{
+		display: none;
+	}
+
+	#map{
+		text-align: center;
+		margin-bottom: 15px;
+	}
+
+	#intro{
+		margin-top: 15px;
+	}
+
+	#question{
+		width:400px;
+	}
+
+	.spinner-border{
+		display:none
+	}
+
+	#list{
+		display:none;
+	}
