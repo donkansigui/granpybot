@@ -1,16 +1,73 @@
 from flask import *
-from parser import *
 from GoogleMapApi import *
 from WikipediaApi import *
+import logging
+logging.basicConfig(level=logging.DEBUG)
+import sys
+
+import re
+from files.config import STOPWORDS
+
+
+class Parser():
+
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def parse_sentence(string):
+
+        result = ''
+        if len(string) > 99:
+            return result
+        words = string.split()
+        for word in words:
+            try:
+                if int(word):
+                    if not result:
+                        result += word
+                    else:
+                        result += ' ' + word
+            except ValueError:
+                if len(word) > 2 and word not in STOPWORDS:
+                    # This part is to get ride of apostrophe
+                    word = word.split("'")
+                    if not result:
+                        result += word[-1]
+                    else:
+                        result += ' ' + word[-1]
+        return result
+
+    @staticmethod
+    def remove_number(string):
+
+        result = ''
+        words = string.split()
+        for word in words:
+            try:
+                int(word)
+            except ValueError:
+                if not result:
+                    result += word
+                else:
+                    result += ' ' + word
+        return result
+
+    @staticmethod
+    def remove_titles(string):
+
+        sentence = re.sub("={2}\s.*\s={2}\s", "", string)
+        return sentence
+
 app = Flask(__name__)
 
 KEY = 'AIzaSyAefulviC3pPj_Sjjtj53Y8WpPNjDDDqsY'
+
 
 @app.route('/')
 def hello_world():
     return render_template('index.html')
 
-app.run()
 
 @app.route('/process', methods=['POST'])
 def process():
@@ -37,3 +94,8 @@ def process():
     ret_wiki = wikipedia.get_data(result['route'])
     story = parser.remove_titles(ret_wiki['text'])
     return jsonify({'map':ret_gmap.url,'story':story,'address':place_id['address'],'url':ret_wiki['url']})
+
+
+
+
+app.run(debug=True)

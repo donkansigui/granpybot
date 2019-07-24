@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <link rel="stylesheet" href="{{url_for ('static', filename= 'css/style.css') }}"  type="text/css" />
         <script src="{{ url_for('static', filename='js/form.js') }}"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <title>GranPyBot</title>
 
 
@@ -19,7 +20,7 @@
 
     <div class="container" >
     <h5><center> quelle est ta question </center></h5>
-    <form> <input type='text' name="process" id="question"/>
+    <form> <input type='text' name="question" id="question"/>
     <input type="submit">
         <div class="spinner-border spinner-border-sm" role="status">
             <span class="sr-only">recherche</span>
@@ -27,7 +28,7 @@
     </form>
         <div id='map' class="col-lg-6 col-xs-12">
 					<img id="google_map" src=''/>
-				</div>
+		</div>
 				<div id='story' class='col-lg-6 col-xs-12'>
 					<div class='row'>
 						<div class='col-lg-6 col-xs-12'>
@@ -48,25 +49,16 @@
 				    </div>
 				</div>
 				<p id='error' class='col-lg-6 col-xs-12'></p>
-			</div>
+	</div>
 			<div class="row">
 				<p id='list' class='col-xs-12 col-lg-12'>Précédentes recherches :</br></p>
 				<ul id="previous"></ul>
 			</div>
 
-    </div>
 
 
-    <script>
-        var paragraph = document.getElementById('myP');
-        var first = paragraph.firstChild;
-        var last = paragraph.lastChild;
 
-        alert(first.nodeName.toLowerCase());
-        alert(last.nodeName.toLowerCase());
-    </script>
-</body>
-</html>
+
 
 
 
