@@ -1,4 +1,9 @@
 /* Feuille de styles CSS */
+
+body, header, footer, main {
+  background: #AA3939;
+}
+
 header{
 		border-bottom: black 2px solid;
 		margin-bottom: 15px;
@@ -7,9 +12,27 @@ header{
 	body{
 	    margin:0px;
 	}
+	h1{
+    text-align: center;
+    }
+
+    h2{
+    text-align: center;
+    }
+
+    p{
+    text-align: center;
+    }
+
+    h4{
+    text-align: center;
+    }
 
 	form{
+	    text-align: center;
+	    width: 100%;
 		margin-bottom: 25px;
+		background: #FEAAAA;
 	}
 
 	#footer{

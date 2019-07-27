@@ -61,7 +61,7 @@ class Parser():
 
 app = Flask(__name__)
 
-KEY = 'AIzaSyAefulviC3pPj_Sjjtj53Y8WpPNjDDDqsY'
+KEY = 'AIzaSyD0cQkz8eIF7Ph_QAJxppFEX6kz7i2vVTA '
 
 
 @app.route('/')
