@@ -1,7 +1,7 @@
 /* Feuille de styles CSS */
 
 body, header, footer, main {
-  background: #AA3939;
+  background: #1995AD;
 }
 
 header{
@@ -32,7 +32,7 @@ header{
 	    text-align: center;
 	    width: 100%;
 		margin-bottom: 25px;
-		background: #FEAAAA;
+		background: #A1D6E2;
 	}
 
 	#footer{
