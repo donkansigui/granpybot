@@ -79,7 +79,7 @@ def process():
     if not rep:
         return jsonify({'error': "question incompréhensible"})
 
-    google_map = GoogleMapApi("test")
+    google_map = GoogleMapApi("AIzaSyBdR4GfM18aBDH_SYJwJX2KhYEZY2kQo9k")
     wikipedia = WikipediaApi()
     result = google_map.request_search(rep)
 
