@@ -1,11 +1,10 @@
 from flask import *
-from granpy.GoogleMapApi import *
-from WikipediaApi import *
+from granpybot.objects.WikipediaApi import *
 import logging
 logging.basicConfig(level=logging.DEBUG)
 
 import re
-from files.config import STOPWORDS
+from granpybot.stopwords.config import STOPWORDS
 
 
 class Parser():

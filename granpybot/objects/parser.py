@@ -1,5 +1,5 @@
 import re
-from files.config import STOPWORDS
+from granpybot.stopwords.config import STOPWORDS
 
 
 class Parser():
