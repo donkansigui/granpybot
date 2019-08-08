@@ -3,6 +3,8 @@ from granpybot.objects.wikipedia_api import WikipediaApi
 import logging
 from .objects.parser import Parser
 from .objects.google_map_api import GoogleMapApi
+
+
 logging.basicConfig(level=logging.DEBUG)
 
 import re
@@ -30,7 +32,7 @@ def process():
     if not rep:
         return jsonify({'error': "question incompréhensible"})
 
-    google_map = GoogleMapApi("AIzaSyBdR4GfM18aBDH_SYJwJX2KhYEZY2kQo9k")
+    google_map = GoogleMapApi("GMAK")
     wikipedia = WikipediaApi()
     result = google_map.request_search(rep)
 
