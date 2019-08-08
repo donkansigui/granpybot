@@ -1,9 +1,8 @@
 from flask import *
-from GoogleMapApi import *
+from granpy.GoogleMapApi import *
 from WikipediaApi import *
 import logging
 logging.basicConfig(level=logging.DEBUG)
-import sys
 
 import re
 from files.config import STOPWORDS
