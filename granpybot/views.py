@@ -7,9 +7,6 @@ from .stopwords.config import GMAK
 
 logging.basicConfig(level=logging.DEBUG)
 
-import re
-from granpybot.stopwords.config import STOPWORDS
-
 
 
 app = Flask(__name__)

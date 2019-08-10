@@ -1,15 +1,23 @@
+"""The STOPWORDS from CONFIG is a list of unwanted words"""
 import re
 from granpybot.stopwords.config import STOPWORDS
 
 
 class Parser():
+    """This class will contain methods to parse different string data
+    to return a different string usable for the next steps of the
+    programm
+    """
 
     def __init__(self):
         pass
 
     @staticmethod
     def parse_sentence(string):
-
+        """This method take the given string, split into a list of words
+        then parse each word according to their length or if they
+        belong to the STOPWORDS list
+        """
         result = ''
         if len(string) > 99:
             return result
@@ -33,7 +41,7 @@ class Parser():
 
     @staticmethod
     def remove_number(string):
-
+        """This method will remove the numbers."""
         result = ''
         words = string.split()
         for word in words:
@@ -48,6 +56,9 @@ class Parser():
 
     @staticmethod
     def remove_titles(string):
-
+        """The data retrivied from Wiki Media API return some
+        unwanted titles like " == Title == " so this method
+        erase them and return the new string
+        """
         sentence = re.sub("={2}\s.*\s={2}\s", "", string)
         return sentence
