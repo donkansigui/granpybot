@@ -1,4 +1,3 @@
 venv/
 grandpybot/__pycache__/
 grandpybot/objects/__pycache__/
-granpybot/tests/__pycache__/
