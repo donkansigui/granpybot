@@ -14,12 +14,16 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
+    """Index page, with simply the form"""
     return render_template('index.html')
 
 # import flask
 
 @app.route('/process', methods=['POST'])
 def process():
+    """Page to process POST request sent from Index Page's Form
+    using AJAX with the form.js file to return every data
+    """
     parser = Parser()
     question = request.form['question']
     if not question:
